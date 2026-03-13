@@ -1,13 +1,22 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+USER = os.getenv("DB_USER")
+PASSWORD = os.getenv("DB_PASSWORD")
+HOST = os.getenv("DB_HOST", "localhost")
+PORT = os.getenv("DB_PORT", "5432")
+DATABASE = os.getenv("DB_NAME", "health_ecommerce_db")
 # 1. Professional Database Credentials
 # Update the password to the one you set for the health_admin user in pgAdmin
-USER = 'health_admin'
-PASSWORD = 'vineeth123'
-HOST = 'localhost'
-PORT = '5432'  # Default port for PostgreSQL
-DATABASE = 'health_ecommerce_db'
+USER = os.getenv("DB_USER")
+PASSWORD = os.getenv("DB_PASSWORD")
+HOST = os.getenv("DB_HOST", "localhost")
+PORT = os.getenv("DB_PORT", "5432")
+DATABASE = os.getenv("DB_NAME", "health_ecommerce_db")
 
 print("Initializing PostgreSQL connection...")
 
