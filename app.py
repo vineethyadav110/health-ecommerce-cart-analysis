@@ -3,6 +3,10 @@ import pandas as pd
 from sqlalchemy import create_engine
 import plotly.express as px
 
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 # 1. Page Configuration (Sets up the web page title and layout width)
 st.set_page_config(page_title="Health E-Commerce Analytics", layout="wide")
 
